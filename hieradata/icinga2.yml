@@ -1,0 +1,5 @@
+icinga2::services::nrpe:
+        - "check_ssh"
+        - "check_disk"
+        - "check_uptime"
+
