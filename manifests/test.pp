@@ -17,7 +17,7 @@ node "testovaci.stroj.cerit-sc.cz" {
 
   $services = lookup('icinga2::services::nrpe')
   
-  $services.each |$name, $parameters| {
+  $services.each |$name| {
     icinga2::icinga2_service { "check_nrpe_${name}":
       check_command          => "nrpe",
       enable_notifications   => true,
